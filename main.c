@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 
+
+void clearScreen() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
 
 int sum(int num01, int num02) {
 
@@ -78,7 +85,7 @@ int main() {
 
             case '1': {
 
-                system("cls");
+                clearScreen();
 				printf("Digite um número: ");
                 scanf("%d",&num01);
                 printf("Digite outro número: ");
@@ -91,7 +98,7 @@ int main() {
 
             case '2': {
 
-                system("cls");
+                clearScreen();
 				printf("Digite um número: ");
                 scanf("%d",&num01);
                 printf("Digite outro número: ");
@@ -104,7 +111,7 @@ int main() {
 
             case '3': {
 
-                system("cls");
+                clearScreen();
 				printf("Digite um número: ");
                 scanf("%d",&num01);
                 printf("Digite outro número: ");
@@ -117,7 +124,7 @@ int main() {
 
             case '4': {
 
-                system("cls");
+                clearScreen();
                 printf("Digite um número: ");
                 scanf("%d",&num01);
                 printf("Digite outro número: ");
