@@ -34,10 +34,10 @@ int subs(int num01, int num02) {
 
 int mult(int num01, int num02) {
 
-    int result = (float)num01 * num02;
+    int result = num01 * num02;
 
     printf("This Result of your Multiplication %d * %d = %d\n",
-           num01, num02, result);
+           num01, num02, (float)result);
 
     return result;
 }
@@ -49,10 +49,10 @@ int divide(int num01, int num02) {
 		return 0;
 	}
 
-    int result = (float)num01 / num02;
+    int result = num01 / num02;
 
     printf("This Result of your Division %d / %d = %.2f\n",
-           num01, num02, result);
+           num01, num02, (float) result);
 
     return result;
 }
@@ -70,14 +70,14 @@ int main() {
 
         printf("\n");
         printf("---------------- Calculator ----------------\n");
-        printf("1 - Somar\n");
-        printf("2 - Subtrair\n");
-        printf("3 - Multiplicar\n");
-        printf("4 - Dividir\n");
-        printf("0 - Sair\n");
+        printf("1 - Sum\n");
+        printf("2 - Subs\n");
+        printf("3 - Multi\n");
+        printf("4 - Div\n");
+        printf("0 - Exit\n");
         printf("---------------------------------------------\n");
 
-        printf("Escolha uma opcao: ");
+        printf("Choose a option: ");
         scanf(" %c", &input);
 
 
@@ -86,9 +86,9 @@ int main() {
             case '1': {
 
                 clearScreen();
-				printf("Digite um número: ");
+				printf("Write a the number: ");
                 scanf("%d",&num01);
-                printf("Digite outro número: ");
+                printf("Write a the number: ");
                 scanf("%d",&num02);
                 sum(num01, num02);
 
@@ -99,9 +99,9 @@ int main() {
             case '2': {
 
                 clearScreen();
-				printf("Digite um número: ");
+				printf("Write a the number: ");
                 scanf("%d",&num01);
-                printf("Digite outro número: ");
+                printf("Write a the number: ");
                 scanf("%d",&num02);
                 subs(num01, num02);
 
@@ -112,9 +112,9 @@ int main() {
             case '3': {
 
                 clearScreen();
-				printf("Digite um número: ");
+				printf("Write a the number: ");
                 scanf("%d",&num01);
-                printf("Digite outro número: ");
+                printf("Write a the number: ");
                 scanf("%d",&num02);
 				mult(num01, num02);
 
@@ -125,9 +125,9 @@ int main() {
             case '4': {
 
                 clearScreen();
-                printf("Digite um número: ");
+                printf("Write a the number: ");
                 scanf("%d",&num01);
-                printf("Digite outro número: ");
+                printf("Write a the number: ");
                 scanf("%d",&num02);
 				divide(num01, num02);
 
@@ -137,7 +137,7 @@ int main() {
 
             case '0': {
 
-                printf("Saindo...\n");
+                printf("Exit...\n");
 
                 i = 1;
 
@@ -147,7 +147,7 @@ int main() {
 
             default: {
 
-                printf("Opcao invalida!\n");
+                printf("Option Invalid!\n");
 
                 break;
             }
