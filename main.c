@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+// method clean of texts 
 void clearScreen() {
 #ifdef _WIN32
     system("cls");
@@ -10,6 +10,7 @@ void clearScreen() {
 #endif
 }
 
+// method sum
 int sum(int num01, int num02) {
 
     int result = num01 + num02;
@@ -20,7 +21,7 @@ int sum(int num01, int num02) {
     return result;
 }
 
-
+// method substration
 int subs(int num01, int num02) {
 
     int result = num01 - num02;
@@ -31,18 +32,18 @@ int subs(int num01, int num02) {
     return result;
 }
 
-
+// method multiplacation
 int mult(int num01, int num02) {
 
     int result = num01 * num02;
 
-    printf("This Result of your Multiplication %d * %d = %d\n",
+    printf("This Result of your Multiplication %d * %d = %.2f\n",
            num01, num02, (float)result);
 
     return result;
 }
 
-
+// method divide
 int divide(int num01, int num02) {
 	if(num02 == 0){
 		printf("Invalid Result!\n");
@@ -65,7 +66,7 @@ int main() {
     int num01, num02;
     char input;
 
-
+    // bow of repaet - MENU of chooses!
     while (i == 0) {
 
         printf("\n");
